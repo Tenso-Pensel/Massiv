@@ -1,24 +1,27 @@
+package org.example;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class GameList {
+    //создай мне в памяти резиновый список games, где будут только текст, и работает по правилам обычного ArrayList
     List<String> games = new ArrayList<>();
 
 
     public void addGame(String game) {
         games.add(game);
-        System.out.println("Добавлили игру" + game);
+        System.out.println("Добавлили игру:" + " " + game);
     }
 
     public void removeGame(String game) {
         games.remove(game);
-        System.out.println("Удалили игру: " + game);
+        System.out.println("Удалили игру:" + " " + game);
     }
 
     public void findGame(String targetGame) {
         for (int i = 0; i < games.size(); i++) {
             if (games.get(i).equals(targetGame)) {
-                System.out.println("Нашли игру" + targetGame + "под индексом: " + i);
+                System.out.println("Нашли игру" + " " +  targetGame + " " + "под индексом: " + i);
                 return; // выходим из метода, раз уже нашли
             }
         }
